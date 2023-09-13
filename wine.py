@@ -21,7 +21,7 @@ wine_df["WineType"] = [wine.target_names[tpy] for tpy in wine.target]
 X_train, X_test, Y_train, Y_test = train_test_split(wine.data, wine.target, train_size=0.8, random_state=123)
 
 ## Carregar o modelo em disco criado no Jupyter Notebook
-rf_classif = load("data/rf_classif.model")
+rf_classif = load("data/rf_classif.model.joblib")
 
 Y_test_preds = rf_classif.predict(X_test)
 
